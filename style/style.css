@@ -1,0 +1,101 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--dark-blue);
+}
+
+.container {
+    width: 550px;
+    height: 100%;
+    margin: 10rem auto;
+    background-color: var(--dark-grayish-blue);
+    border-radius: 1rem;
+
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+.advice-num {
+    padding-top: 3rem;
+    text-transform: uppercase;
+    color: var(--neon-green);
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+
+}
+.advice-text {
+    padding: 2rem;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--light-cyan);
+}
+#divider-div {
+    margin-top: 0rem;
+    width: 100%;
+    height: 1.5rem;
+    background-image: url(../images/pattern-divider-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#dice-btn {
+    margin-top: 0rem;
+    transform: translateY(2rem);
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    width: 4rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neon-green);
+}
+@media screen and (max-width: 420px) {
+    .container {
+        height: 100%;
+        width: 100vw;
+        padding: 0rem;
+        width: 21.875rem;
+    }
+    .wrapper {
+        height: 100%;
+        width: 100%;
+    }
+    #divider-div {
+        background-image: url(../images/pattern-divider-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 0rem;
+    }
+    
+}
+@media screen and (max-width: 320px) {
+    .container {
+        width: 18.125rem;
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; color: var(--grayish-blue) }
+.attribution a { color: hsl(228, 45%, 44%); }
