@@ -57,8 +57,9 @@ body {
     background-position: center;
 }
 #dice-btn {
-    margin-top: 0rem;
-    transform: translateY(2rem);
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+    /* transform: translateY(2rem); */
     cursor: pointer;
     background: none;
     border: none;
@@ -66,9 +67,9 @@ body {
     width: 4rem;
     border-radius: 50%;
     aspect-ratio: 1/1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     background-color: var(--neon-green);
 }
 @media screen and (max-width: 420px) {
@@ -99,3 +100,30 @@ body {
 
 .attribution { font-size: 11px; text-align: center; color: var(--grayish-blue) }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+.dice-animation {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  /* transform: translateY(2rem); */
+
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

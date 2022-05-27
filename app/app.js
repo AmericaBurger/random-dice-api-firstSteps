@@ -1,6 +1,8 @@
 const adviceNum = document.querySelector('.advice-num');
 const adviceText = document.querySelector('.advice-text');
 const diceBtn = document.getElementById('dice-btn');
+const diceAnimation = document.querySelector('.dice-animation');
+
 
 const url = "https://api.adviceslip.com/advice";
     
@@ -13,6 +15,10 @@ async function fatchData() {
     }
 
 diceBtn.addEventListener('click', () => {
-    fatchData();
+    fatchData()
+    diceBtn.classList.add('dice-animation');
+    setTimeout(() => {
+        diceBtn.classList.remove('dice-animation');
+    }, 500);
 })
 window.onload = fatchData();
